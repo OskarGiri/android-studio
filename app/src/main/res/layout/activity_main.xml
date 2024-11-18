@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Radioactivity">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/radioluffy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Luffy" />
+
+        <RadioButton
+            android:id="@+id/radiozoro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zoro" />
+
+        <RadioButton
+            android:id="@+id/radiosanji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sanji" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/zoro" />
+</LinearLayout>
