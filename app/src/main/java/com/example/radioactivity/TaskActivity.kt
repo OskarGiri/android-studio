@@ -1,5 +1,6 @@
 package com.example.radioactivity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
@@ -11,7 +12,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.radioactivity.databinding.ActivityTaskBinding
 
-class TaskActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener{
+class TaskActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener,
+    AdapterView.OnItemClickListener {
     lateinit var  binding: ActivityTaskBinding
 
 
@@ -20,16 +22,34 @@ class TaskActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener{
         enableEdgeToEdge()
         binding = ActivityTaskBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val Countries= arrayOf(
-            "Nepal","china","India","usa","canada"
+        binding.button3.setOnClickListener {
+            val checkBox : String = binding.checkBox2.text.toString()
+            if (checkBox.isBlank()){
+                binding.checkBox2.error ="Please click on I agree"
+            } else{
+                binding.checkBox2.text ="Please click on I agree"
+            }
+            val intent = Intent(
+                this@TaskActivity,
+                TaskdestinationActivity::class.java
+
+            )
+            intent.putExtra("photo",binding.imageView2)
+
+
+
+        }
+        val countries= arrayOf(
+            "Nepal","China","India","Usa","Canada"
         )
 
             val adapter = ArrayAdapter(
                 this@TaskActivity,
                 android.R.layout.simple_list_item_1,
-                Countries
+                countries
             )
             binding.spinner2.adapter = adapter
+            binding.spinner2.onItemSelectedListener = this
 
 
 
@@ -42,10 +62,17 @@ class TaskActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener{
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-        TODO("Not yet implemented")
+        if (parent!=null) {
+          binding.textView7.text = "You have selected:"+parent.getItemAtPosition(position).toString()
+
+        }
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onItemClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         TODO("Not yet implemented")
     }
 }
