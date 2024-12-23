@@ -16,8 +16,6 @@ class TaskdestinationActivity : AppCompatActivity() {
         binding = ActivityTaskdestinationBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val picture = String =
-            intent::
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)

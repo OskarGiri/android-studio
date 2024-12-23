@@ -34,7 +34,7 @@ class TaskActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener,
                 TaskdestinationActivity::class.java
 
             )
-            intent.putExtra("photo",binding.imageView2)
+//            intent.putExtra("photo",binding.imageView2)
 
 
 
