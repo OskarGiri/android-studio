@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/baseline_home_24"
+        />
+    <item android:title="Music"
+        android:icon="@drawable/baseline_library_music_24"
+        android:id="@+id/music"/>
+
+    <item android:title="Play Music"
+        android:icon="@drawable/baseline_library_music_24"
+        android:id="@+id/playmusic"/>
+
+    <item android:title="Notification"
+        android:icon="@drawable/baseline_notifications_24"
+        android:id="@+id/notifi"/>
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/baseline_search_24"
+        android:title="Search"
+        />
+
+
+
+
+</menu>

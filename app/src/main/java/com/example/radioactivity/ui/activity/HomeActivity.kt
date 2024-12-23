@@ -21,6 +21,8 @@ class HomeActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        replaceFrag(firstFragment())
+
         binding.button4.setOnClickListener{
             replaceFrag(firstFragment())
         }
